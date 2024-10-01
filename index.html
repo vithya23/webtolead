@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This is essential for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for mobile responsiveness -->
     <title>FUND RAISING</title>
     <style>
-        /* Professional background with subtle gradient */
+        /* Set up the page background and typography */
         body {
             background-image: url('https://i0.wp.com/ketto.blog/wp-content/uploads/2022/03/15-Best-Fundraising-Campaign-Ideas-for-Underprivileged-Children.png?fit=1024%2C576&ssl=1'); /* Replace with a professional background image */
             background-size: cover;
@@ -15,13 +15,13 @@
             color: white;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         h1 {
             text-align: center;
-            font-size: 5vw; /* Makes the font size responsive */
-            margin-top: 50px;
+            font-size: 6vw; /* Scales based on viewport width */
+            margin-top: 20px;
             color: #333;
             text-shadow: 1px 1px 2px #fff;
         }
@@ -31,7 +31,7 @@
             padding: 20px;
             border-radius: 10px;
             width: 90%;
-            max-width: 400px; /* Ensures form doesn't get too wide on larger screens */
+            max-width: 400px; /* Ensures it doesn't get too large on wide screens */
             margin: 20px auto;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
             color: black;
@@ -44,23 +44,20 @@
             color: #333;
         }
 
-        input[type="text"] {
+        input[type="text"], input[type="submit"] {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 1em;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding is included in width */
         }
 
         input[type="submit"] {
-            width: 100%;
-            padding: 12px;
             background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
             color: white;
-            font-size: 1em;
+            border: none;
             cursor: pointer;
         }
 
@@ -68,35 +65,38 @@
             background-color: #0056b3;
         }
 
-        /* Responsive adjustments for small screens */
-        @media (max-width: 768px) {
+        /* Adjust the form for smaller phones (less than 480px wide) */
+        @media (max-width: 480px) {
             h1 {
-                font-size: 6vw; /* Slightly larger font on small screens */
+                font-size: 8vw; /* Further scale the title for smaller screens */
             }
 
             form {
-                width: 95%;
                 padding: 15px;
+                margin: 10px auto;
+                width: 95%;
             }
 
             input[type="text"], input[type="submit"] {
-                font-size: 0.9em;
+                font-size: 14px; /* Adjust the input and button size */
+                padding: 10px;
             }
         }
 
-        @media (max-width: 480px) {
+        /* Adjust the form for tablets (less than 768px wide) */
+        @media (max-width: 768px) {
             h1 {
-                font-size: 7vw; /* Further scale down heading on very small screens */
+                font-size: 7vw; /* Adjust the title size for tablet screens */
             }
 
             form {
-                padding: 10px;
-                margin-top: 10px;
+                width: 90%;
+                padding: 20px;
             }
 
             input[type="text"], input[type="submit"] {
-                font-size: 0.85em;
-                padding: 10px;
+                font-size: 15px;
+                padding: 12px;
             }
         }
     </style>
@@ -118,4 +118,12 @@
         <input id="email" maxlength="80" name="email" size="20" type="text" />
 
         <label for="company">Company</label>
-        <input id="company"
+        <input id="company" maxlength="40" name="company" size="20" type="text" />
+
+        <label for="title">Title</label>
+        <input id="title" maxlength="40" name="title" size="20" type="text" />
+
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
