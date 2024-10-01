@@ -119,6 +119,11 @@
 
         <label for="company">Company</label>
         <input id="company" maxlength="40" name="company" size="20" type="text" />
+        
+        <label for="phone">Phone</label>
+        <input id="phone" name="Phone" maxlength="10" minlength="10" size="10" type="tel" pattern="\d{10,15}" required />
+        <span class="error-message" style="color:red; display:none;">Please enter a valid phone number (10-15 digits).</span>
+
 
         <label for="title">Title</label>
         <input id="title" maxlength="40" name="title" size="20" type="text" />
