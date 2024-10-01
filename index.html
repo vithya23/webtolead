@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This is essential for responsiveness -->
     <title>FUND RAISING</title>
     <style>
         /* Professional background with subtle gradient */
@@ -19,19 +20,20 @@
 
         h1 {
             text-align: center;
-            font-size: 48px;
+            font-size: 5vw; /* Makes the font size responsive */
             margin-top: 50px;
-            color: #333; /* Darker text color for a more professional feel */
+            color: #333;
             text-shadow: 1px 1px 2px #fff;
         }
 
         form {
-            background-color: rgba(255, 255, 255, 0.95); /* White background for form, slightly transparent */
-            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
             border-radius: 10px;
-            width: 400px;
-            margin: 80px auto;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for a more modern, professional look */
+            width: 90%;
+            max-width: 400px; /* Ensures form doesn't get too wide on larger screens */
+            margin: 20px auto;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
             color: black;
         }
 
@@ -44,26 +46,58 @@
 
         input[type="text"] {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
+            padding: 12px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 1em;
         }
 
         input[type="submit"] {
             width: 100%;
             padding: 12px;
-            background-color: #007BFF; /* Professional blue color */
+            background-color: #007BFF;
             border: none;
             border-radius: 5px;
             color: white;
-            font-size: 16px;
+            font-size: 1em;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
+        }
+
+        /* Responsive adjustments for small screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 6vw; /* Slightly larger font on small screens */
+            }
+
+            form {
+                width: 95%;
+                padding: 15px;
+            }
+
+            input[type="text"], input[type="submit"] {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 7vw; /* Further scale down heading on very small screens */
+            }
+
+            form {
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            input[type="text"], input[type="submit"] {
+                font-size: 0.85em;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -84,12 +118,4 @@
         <input id="email" maxlength="80" name="email" size="20" type="text" />
 
         <label for="company">Company</label>
-        <input id="company" maxlength="40" name="company" size="20" type="text" />
-
-        <label for="title">Title</label>
-        <input id="title" maxlength="40" name="title" size="20" type="text" />
-
-        <input type="submit" name="submit" value="Submit">
-    </form>
-</body>
-</html>
+        <input id="company"
